@@ -1,0 +1,11 @@
+Model Information:
+* title:	Mclaren MP4-12C Ultimate
+* source:	https://sketchfab.com/3d-models/mclaren-mp4-12c-ultimate-80f19f7f5aac428985356987769538fe
+* author:	COOL601 (https://sketchfab.com/COOL601)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Mclaren MP4-12C Ultimate" (https://sketchfab.com/3d-models/mclaren-mp4-12c-ultimate-80f19f7f5aac428985356987769538fe) by COOL601 (https://sketchfab.com/COOL601) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
