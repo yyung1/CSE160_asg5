@@ -154,19 +154,23 @@ function main() {
 
     // Create cubes (collision objects)
     const obstacles = [];
-    const boxGeometry = new THREE.BoxGeometry(1, 1, 1);
-    function makeObstacle(color, x, z) {
+    const geometry = new THREE.TorusKnotGeometry(.22, .1, 50, 16);
+    const sphereGeometry = new THREE.SphereGeometry(0.5, 32, 32);
+    const ringGeometry = new THREE.TorusGeometry(0.5, 0.2, 16, 100);
+    function makeObstacle(color, x, z, geometry) {
         const material = new THREE.MeshPhongMaterial({ color });
-        const cube = new THREE.Mesh(boxGeometry, material);
-        scene.add(cube);
-        cube.position.set(x, 0.5, z);
-        obstacles.push(cube);  // Add to obstacle list
-        return cube;
+        const mesh = new THREE.Mesh(geometry, material);
+        mesh.castShadow = true;
+        mesh.receiveShadow = true;
+        scene.add(mesh);
+        mesh.position.set(x, 4, z);
+        obstacles.push(mesh);  // Add to obstacle list
+        return mesh;
     }
 
-    makeObstacle(0x44aa88, 0, 0);
-    makeObstacle(0x8844aa, -2, -2);
-    makeObstacle(0xaa8844, 2, 2);
+    makeObstacle(0x44aa88, 0, 0, geometry);
+    makeObstacle(0x8844aa, -2, -2, sphereGeometry);
+    makeObstacle(0xaa8844, 2, 2, ringGeometry);
 
     // Movement and mouse look variables
     let moveSpeed = 0.1;
